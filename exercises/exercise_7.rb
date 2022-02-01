@@ -11,4 +11,13 @@ puts "----------"
 
 # Your code goes here ...
 
+puts "enter the store name"
+store_name = gets.chomp
+
+store = Store.create(name: store_name).errors.messages
+puts store
+
+store.each do |error|
+  puts error
+end
 
